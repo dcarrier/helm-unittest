@@ -2,7 +2,7 @@ package unittest
 
 import (
 	"fmt"
-	"log"
+	"path"
 	"path/filepath"
 	"time"
 
@@ -60,7 +60,6 @@ type TestRunner struct {
 
 // Run test suites in chart in ChartPaths
 func (tr *TestRunner) Run(ChartPaths []string) bool {
-	log.Println("wtf")
 	allPassed := true
 	start := time.Now()
 	for _, chartPath := range ChartPaths {
@@ -92,10 +91,17 @@ func (tr *TestRunner) Run(ChartPaths []string) bool {
 
 // getTestSuites return test files of the chart which matched patterns
 func (tr *TestRunner) getTestSuites(chartPath, chartRoute string, chart *chart.Chart) ([]*TestSuite, error) {
+	var files []string
+	var err error
 	filesSet := map[string]bool{}
-	log.Println("Anyone home")
+
 	for _, pattern := range tr.Config.TestFiles {
-		files, err := filepath.Glob("/" + filepath.Join(chartPath, pattern))
+		// If path to test files is fully qualified, do not append chart path
+		if path.IsAbs(pattern) {
+			files, err = filepath.Glob(pattern)
+		} else {
+			files, err = filepath.Glob(filepath.Join(chartPath, pattern))
+		}
 		if err != nil {
 			return nil, err
 		}
