@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/lrills/helm-unittest/unittest/snapshot"
+	"github.com/dcarrier/helm-unittest/unittest/snapshot"
 	"gopkg.in/yaml.v2"
 	"k8s.io/helm/pkg/proto/hapi/chart"
 )

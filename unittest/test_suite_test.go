@@ -6,8 +6,8 @@ import (
 	"testing"
 
 	"github.com/bradleyjkemp/cupaloy"
-	. "github.com/lrills/helm-unittest/unittest"
-	"github.com/lrills/helm-unittest/unittest/snapshot"
+	. "github.com/dcarrier/helm-unittest/unittest"
+	"github.com/dcarrier/helm-unittest/unittest/snapshot"
 	"github.com/stretchr/testify/assert"
 	yaml "gopkg.in/yaml.v2"
 	"k8s.io/helm/pkg/chartutil"

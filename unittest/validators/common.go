@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/lrills/helm-unittest/unittest/common"
-	"github.com/lrills/helm-unittest/unittest/snapshot"
+	"github.com/dcarrier/helm-unittest/unittest/common"
+	"github.com/dcarrier/helm-unittest/unittest/snapshot"
 	"github.com/pmezard/go-difflib/difflib"
 )
 

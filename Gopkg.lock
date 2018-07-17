@@ -99,18 +99,6 @@
   version = "v1.0"
 
 [[projects]]
-  name = "github.com/lrills/helm-unittest"
-  packages = [
-    "unittest",
-    "unittest/common",
-    "unittest/snapshot",
-    "unittest/validators",
-    "unittest/valueutils"
-  ]
-  revision = "263bf9ef4a3f2d3f019f1fd24f099d403bb7d5d8"
-  version = "v0.1.2"
-
-[[projects]]
   name = "github.com/mattn/go-colorable"
   packages = ["."]
   revision = "167de6bfdfba052fa6b2d3664c8f5272e23c9072"
@@ -206,6 +194,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "561e655d0ff46cd44c665587f5f40fdfd8df01f21a0f4b9757fe00000a57f74e"
+  inputs-digest = "1d7458c3b71571c4abd8101b5fe1c9457be6aae45e8a724614cf3f123499ccea"
   solver-name = "gps-cdcl"
   solver-version = 1
